@@ -47,5 +47,8 @@ public class BillDemo {
 			System.out.println(item);
 		}
 		
+		System.out.println("################################# Item which Rate is grater than 1000 ###############################");
+		
+		System.out.println(bm.getCostlyItemPurchased(itemList));
 	}
 }

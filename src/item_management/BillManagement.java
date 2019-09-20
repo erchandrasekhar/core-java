@@ -2,6 +2,7 @@ package item_management;
 
 import java.util.ArrayList;
 
+
 public class BillManagement implements Bill{
    
 	/*Billing of Item according to item selected by public*/
@@ -102,8 +103,23 @@ public class BillManagement implements Bill{
 
 	@Override
 	public ArrayList<Item> getCostlyItemPurchased(ArrayList<Item> itemList) {
+		ArrayList<Item> itemForReturn = new ArrayList<>();
 		
-		return null;
+		if(!itemList.isEmpty() && itemList.size()>0)
+		{
+			for (Item item : itemList) 
+			{
+				if(item!=null)
+				{
+					if(item.getRate()>1000)
+					{
+						itemForReturn.add(item);	
+					}
+				}
+			}
+		}
+		
+		return itemForReturn;
 	}
 	
 	
