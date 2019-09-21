@@ -4,7 +4,8 @@ public class Student extends Person{
 	
 	private int rollNo;
 	private String dept;
-	public int getRollNo() {
+	public int getRollNo()
+	{
 		return rollNo;
 	}
 	public void setRollNo(int rollNo) {
@@ -23,9 +24,10 @@ public class Student extends Person{
 	}
 	@Override
 	public String toString() {
-		return "Student [rollNo=" + rollNo + ", dept=" + dept + "]";
+		return "Student [rollNo=" + rollNo + ", dept=" + dept + ", getName()=" + getName() + ", getGender()="
+				+ getGender() + ", getState()=" + getState() + ", getClass()=" + getClass() + ", hashCode()="
+				+ hashCode() + ", toString()=" + super.toString() + "]";
 	}
-	
 	
 
 }
