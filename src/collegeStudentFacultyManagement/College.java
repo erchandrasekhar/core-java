@@ -1,6 +1,4 @@
 package collegeStudentFacultyManagement;
-
-import java.beans.FeatureDescriptor;
 import java.util.ArrayList;
 
 public class College {
