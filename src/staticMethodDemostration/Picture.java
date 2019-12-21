@@ -1,5 +1,7 @@
 package staticMethodDemostration;
 
+import java.util.ArrayList;
+
 public class Picture {
 
 	private int  pictureId;
@@ -32,6 +34,27 @@ public class Picture {
 	@Override
 	public String toString() {
 		return "Picture [pictureId=" + pictureId + ", color=" + color + ", area=" + area + "]";
+	}
+	
+	/*if u declare method is static than no need to create object of class were methods are defined we just go with class name.methodname to call*/
+	public static ArrayList<Picture> searchPictureByColor(ArrayList<Picture> pictureList,String color)
+	{   
+		ArrayList<Picture> picList = new ArrayList<>();
+		if(!pictureList.isEmpty())
+		{
+			for (Picture picture : pictureList)
+			{
+				if(picture!=null)
+				{
+					if(picture.getColor().equals(color))
+					{
+						picList.add(picture);
+					}
+					
+				}
+			}
+		}
+		return picList;
 	}
 	
 	

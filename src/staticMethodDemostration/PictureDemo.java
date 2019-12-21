@@ -19,30 +19,8 @@ public class PictureDemo {
      pictureList.add(picture4);
      pictureList.add(picture5);
      
-     System.out.println(searchPictureByColor(pictureList, "rgb"));
+     System.out.println(Picture.searchPictureByColor(pictureList, "rgb"));
      
 	}
-	/*if u declare method is static than no need to create object of class were methods are defined we just go with class name.methodname to call*/
-	public static ArrayList<Picture> searchPictureByColor(ArrayList<Picture> pictureList,String color)
-	{   
-		ArrayList<Picture> picList = new ArrayList<>();
-		if(!pictureList.isEmpty())
-		{
-			for (Picture picture : pictureList)
-			{
-				if(picture!=null)
-				{
-					if(picture.getColor().equals(color))
-					{
-						picList.add(picture);
-					}
-					else
-					{
-						picList.add(null);
-					}
-				}
-			}
-		}
-		return picList;
-	}
+	
 }
